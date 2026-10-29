@@ -1,0 +1,7 @@
+{
+  "name": "KROK Telegram Leads Webhook",
+  "nodes": [
+    { "parameters": { "path": "krok-leads", "httpMethod": "POST" }, "name": "Webhook", "type": "n8n-nodes-base.webhook" },
+    { "parameters": { "functionCode": "return [{ json: { lead: items[0].json.phone, verified: true } }];" }, "name": "Filter", "type": "n8n-nodes-base.function" }
+  ]
+}
